@@ -7,7 +7,7 @@ object AddGenesAndTranscriptsToGtfTest extends BiopetTest {
   @Test
   def testNoArgs(): Unit = {
     intercept[IllegalArgumentException] {
-      ToolTemplate.main(Array())
+      AddGenesAndTranscriptsToGtf.main(Array())
     }
   }
 }
