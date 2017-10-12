@@ -5,10 +5,12 @@ import java.io.File
 import nl.biopet.utils.tool.AbstractOptParser
 
 class ArgsParser(cmdName: String) extends AbstractOptParser[Args](cmdName) {
-  opt[File]("inputFile")
-    .abbr("i")
-    .unbounded()
-    .required()
-    .maxOccurs(1)
-    .action((x, c) => c.copy(inputFile = x))
+  opt[File]('I', "input") required () unbounded () valueName "<file>" action {
+    (x, c) =>
+      c.copy(input = x)
+  } text "Input gtf file. Mandatory"
+  opt[File]('o', "output") required () unbounded () valueName "<file>" action {
+    (x, c) =>
+      c.copy(output = x)
+  } text "Output gtf file. Mandatory"
 }
