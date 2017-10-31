@@ -8,7 +8,7 @@ import nl.biopet.utils.tool.ToolCommand
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
-object AddGenesAndTranscriptsToGtf extends ToolCommand {
+object AddGenesAndTranscriptsToGtf extends ToolCommand[Args] {
   def main(args: Array[String]): Unit = {
     val parser = new ArgsParser(toolName)
     val cmdArgs =
