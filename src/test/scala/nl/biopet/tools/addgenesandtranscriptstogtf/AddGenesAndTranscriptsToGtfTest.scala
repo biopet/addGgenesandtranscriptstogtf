@@ -17,6 +17,8 @@ class AddGenesAndTranscriptsToGtfTest extends ToolTest[Args] {
     }
   }
 
+  def toolCommand: AddGenesAndTranscriptsToGtf.type = AddGenesAndTranscriptsToGtf
+
   @Test
   def testMain(): Unit = {
     val inputFile = File.createTempFile("test.", ".gtf")
