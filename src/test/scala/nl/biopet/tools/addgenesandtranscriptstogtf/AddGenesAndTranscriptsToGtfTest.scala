@@ -2,20 +2,22 @@ package nl.biopet.tools.addgenesandtranscriptstogtf
 
 import java.io.File
 
-import nl.biopet.test.BiopetTest
+import nl.biopet.utils.test.tools.ToolTest
 import nl.biopet.utils.IoUtils
 import nl.biopet.utils.ngs.annotation.Feature
 import org.testng.annotations.Test
 
 import scala.io.Source
 
-class AddGenesAndTranscriptsToGtfTest extends BiopetTest {
+class AddGenesAndTranscriptsToGtfTest extends ToolTest[Args] {
   @Test
   def testNoArgs(): Unit = {
     intercept[IllegalArgumentException] {
       AddGenesAndTranscriptsToGtf.main(Array())
     }
   }
+
+  def toolCommand: AddGenesAndTranscriptsToGtf.type = AddGenesAndTranscriptsToGtf
 
   @Test
   def testMain(): Unit = {
