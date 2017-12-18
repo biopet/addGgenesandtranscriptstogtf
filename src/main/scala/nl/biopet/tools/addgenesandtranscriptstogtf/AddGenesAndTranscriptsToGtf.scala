@@ -10,7 +10,7 @@ import scala.io.Source
 
 object AddGenesAndTranscriptsToGtf extends ToolCommand[Args] {
   def emptyArgs: Args = Args()
-  def argsParser = new ArgsParser(toolName)
+  def argsParser = new ArgsParser(this)
 
   def main(args: Array[String]): Unit = {
     val cmdArgs = cmdArrayToArgs(args)
