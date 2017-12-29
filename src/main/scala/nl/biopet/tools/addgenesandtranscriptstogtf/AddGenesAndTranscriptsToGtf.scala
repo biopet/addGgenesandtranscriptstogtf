@@ -93,9 +93,15 @@ object AddGenesAndTranscriptsToGtf extends ToolCommand[Args] {
     logger.info("Done")
   }
 
-  def descriptionText: String = ???
+  def descriptionText: String =
+    """
+      |This tool adds genes and transcripts to a GTF file, based on the exons available in an input GTF file.
+    """.stripMargin
 
   def manualText: String = ???
 
-  def exampleText: String = ???
+  def exampleText: String =
+    s"""
+       |${example("-I", "input.gtf", "-o", "output.gtf")}
+     """.stripMargin
 }
