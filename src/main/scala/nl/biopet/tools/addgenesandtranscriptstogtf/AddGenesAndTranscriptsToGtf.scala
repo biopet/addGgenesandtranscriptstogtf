@@ -93,4 +93,9 @@ object AddGenesAndTranscriptsToGtf extends ToolCommand[Args] {
     logger.info("Done")
   }
 
+  def descriptionText: String = ???
+
+  def manualText: String = ???
+
+  def exampleText: String = ???
 }
