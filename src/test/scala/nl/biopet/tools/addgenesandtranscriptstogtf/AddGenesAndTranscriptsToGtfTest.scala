@@ -3,7 +3,7 @@ package nl.biopet.tools.addgenesandtranscriptstogtf
 import java.io.File
 
 import nl.biopet.utils.test.tools.ToolTest
-import nl.biopet.utils.IoUtils
+import nl.biopet.utils.io._
 import nl.biopet.utils.ngs.annotation.Feature
 import org.testng.annotations.Test
 
@@ -52,7 +52,7 @@ class AddGenesAndTranscriptsToGtfTest extends ToolTest[Args] {
       Some(true),
       None,
       Map("gene_id" -> "gene_1", "transcript_id" -> "transcript_1_1"))
-    IoUtils.writeLinesToFile(inputFile, List("#test", exon1.asGtfLine, exon2.asGtfLine))
+    writeLinesToFile(inputFile, List("#test", exon1.asGtfLine, exon2.asGtfLine))
 
     val outputFile = File.createTempFile("test.", ".gtf")
     outputFile.deleteOnExit()
